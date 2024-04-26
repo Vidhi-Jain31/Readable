@@ -1,0 +1,144 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .col-50 {
+            width: 50%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .col-50 img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+        .form-container {
+            background-color: pink;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-container select, .form-container input[type="date"], .form-container textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .form-container textarea {
+            height: 100px;
+            resize: none;
+        }
+        .form-container button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+        }
+        .form-container button:hover {
+            background-color: #45a049;
+        }
+        .package {
+            width: 33.33%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .package img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .service {
+            width: 50%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .service-item {
+            margin-bottom: 20px;
+        }
+        .service-item h3 {
+            margin-top: 0;
+        }
+        .service-item p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="row">
+        <div class="col-50">
+            <img src="brand-image.jpg" alt="Brand Image">
+        </div>
+        <div class="col-50">
+            <div class="form-container">
+                <form action="#">
+                    <label for="where-to">Where to:</label>
+                    <select id="where-to" name="where-to">
+                        <option value="paris">Paris</option>
+                        <option value="new-york">New York</option>
+                        <option value="tokyo">Tokyo</option>
+                        <!-- Add more options as needed -->
+                    </select>
+                    <label for="how-many">How Many Person:</label>
+                    <input type="number" id="how-many" name="how-many" min="1">
+                    <label for="start-date">Start Date:</label>
+                    <input type="date" id="start-date" name="start-date" min="2024-04-27">
+                    <label for="end-date">End Date:</label>
+                    <input type="date" id="end-date" name="end-date" min="2024-04-27">
+                    <label for="description">Description:</label>
+                    <textarea id="description" name="description" minlength="50" maxlength="500"></textarea>
+                    <button type="submit">Book Now</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Package Section -->
+    <div class="row">
+        <div class="package">
+            <img src="place1.jpg" alt="Place 1">
+            <h2>Place 1</h2>
+            <p>Attractions Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p>Price: $100</p>
+            <p>Rating: 4.5</p>
+            <button>Book Now</button>
+        </div>
+        <!-- Add more packages as needed -->
+    </div>
+
+    <!-- Services Section -->
+    <div class="row">
+        <div class="service">
+            <div class="service-item">
+                <h3>Affordable Hotel</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+            <div class="service-item">
+                <h3>Food & Drinks</h3>
+                <p>Break fast - lunch - evening snacks - dinner .</p>
+            </div>
+            <!-- Add more services as needed -->
+        </div>
+    </div>
+</body>
+</html>

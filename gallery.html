@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .col-50 {
+            width: 50%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .col-50 img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            transition: transform 0.3s ease;
+        }
+        .col-50 img:hover {
+            transform: scale(1.1);
+        }
+        .company-info {
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        .footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="row">
+        <div class="col-50">
+            <img src="brand-image.jpg" alt="Brand Image">
+        </div>
+        <div class="col-50 company-info">
+            <h2>About Us</h2>
+            <p> VEDMAN is the largest independently owned travel agency headquartered in California, and consistently ranked among the top 50 largest in the United States..</p>
+            <p>Establishment: 2000</p>
+            <!-- Add more company information as needed -->
+        </div>
+    </div>
+
+    <!-- Gallery Section -->
+    <div class="row">
+        <div class="col-50">
+            <img src="gallery-image1.jpg" alt="Gallery Image 1">
+        </div>
+        <div class="col-50">
+            <img src="gallery-image2.jpg" alt="Gallery Image 2">
+        </div>
+        <!-- Add more gallery images as needed -->
+    </div>
+
+    <!-- About Us Section -->
+    <div class="row">
+        <div class="col-50">
+            <img src="about-us-image.jpg" alt="About Us Image">
+        </div>
+        <div class="col-50 company-info">
+            <h2>About Us</h2>
+            <p>We are an employee-owned company with a passion for providing exemplary customer service, leveraging our expertise and technology to deliver innovative travel solutions in a gratifying work environment.</p>
+            <p>Establishment: 2000</p>
+            <!-- Add more company information as needed -->
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="footer">
+        <p>&copy; 2024 VEDMAN. All Rights Reserved.</p>
+        <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+        <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+        <!-- Add more social media icons as needed -->
+    </div>
+</body>
+</html>

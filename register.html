@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <style>
+        /* Add internal styles here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        h2 {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        p.success {
+            color: #4CAF50;
+            text-align: center;
+        }
+
+        p {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        p a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        p a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h2>Register</h2>
+    <form id="registerForm">
+        <input type="text" id="fullname" placeholder="Full Name" required><br>
+        <input type="text" id="contact" placeholder="Contact" required><br>
+        <input type="date" id="dob" placeholder="Date of Birth" required><br>
+        <input type="email" id="email" placeholder="Email" required><br>
+        <input type="password" id="password" placeholder="Password" required><br>
+        <select id="gender" required>
+            <option value="">Select Gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select><br>
+        <button type="submit">Register</button>
+    </form>
+    <p id="successMsg" class="success" style="display: none;">Registration successful!</p>
+    <p>Already have an account? <a href="login.html">Login</a></p>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const registerForm = document.getElementById("registerForm");
+            const successMsg = document.getElementById("successMsg");
+
+            registerForm.addEventListener("submit", function(event) {
+                event.preventDefault(); // Prevent form submission
+                // Fetch form values
+                const fullname = document.getElementById("fullname").value;
+                const contact = document.getElementById("contact").value;
+                const dob = document.getElementById("dob").value;
+                const email = document.getElementById("email").value;
+                const password = document.getElementById("password").value;
+                const gender = document.getElementById("gender").value;
+
+                // Here, you can save the data or perform any necessary validation
+
+                // Display success message
+                successMsg.style.display = "block";
+
+                // Optionally, reset the form
+                registerForm.reset();
+            });
+        });
+    </script>
+</body>
+</html>
